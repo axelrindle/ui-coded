@@ -21,8 +21,14 @@ h1
  * Use a wrapper element which is a flexbox
  */
 .wrapper
-  display: flex
-  justify-content: center
-  align-items: center
   background-color: $background_color
   color: $text_color
+  +flexbox(row, true)
+
+.copyright
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  padding: $general_padding
+  +flexbox(row, true)
