@@ -1,0 +1,43 @@
+/**
+ * Remove the dotted outline on active elements
+ */
+*
+  outline: 0 !important
+
+
+/**
+ * Use the full page
+ */
+html, body
+  height: 100%
+  width: 100%
+
+  +flexbox(row, true, center)
+
+  font-family: $font_family
+  background-color: $background_color
+
+
+h1
+  font-size: 40px
+
+/**
+ * Use a wrapper element which is a flexbox
+ */
+.wrapper
+  height: 100%
+  width: 850px
+  color: $text_color
+
+  +flexbox(row, true, center)
+
+.copyright
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+
+  padding: $base_padding
+  font-family: "Raleway", sans-serif
+
+  +flexbox(row, true, center)

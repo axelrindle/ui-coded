@@ -1,0 +1,9 @@
+/**
+ * Applies the flexbox display type to an element.
+ */
+=flexbox($type, $align: true, $justify_type: center)
+  display: flex
+  flex-flow: $type nowrap
+  @if $align
+    justify-content: $justify_type
+    align-items: center
