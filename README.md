@@ -4,4 +4,4 @@ This repository contains several UI concepts which I tried to code as best as I 
 
 ## LICENSE
 
-Every project has it's own license with links to the original authors.
+The **code** is generally [MIT](LICENSE) licensed while all copyright goes to the original authors, who are always credited.
