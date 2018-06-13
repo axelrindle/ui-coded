@@ -1,0 +1,112 @@
+.top, .bottom
+  width: inherit
+  padding: $general_padding*2
+
+  +flexbox(column, true, flex-start)
+
+.top
+  flex: 1 0 auto
+
+  h1
+    font-weight: 500
+
+  span
+    font-weight: 300
+    font-size: 12px
+
+    &.big
+      font-size: 14px
+
+  form
+    height: 100%
+    width: inherit
+
+    +flexbox(column, true, space-around)
+
+    .circle
+      height: 10px
+      width: 10px
+      border: 2px solid $blue
+      border-radius: 50px
+
+      &.small
+        height: 2px
+        width: 2px
+        background-color: $blue
+        margin-right: 6px
+
+    .terms
+      +flexbox(row, true, flex-start, center)
+      width: 300px
+
+    .field
+      +flexbox(row, true)
+
+      input
+        width: 300px
+        padding: $general_padding $general_padding*2
+        margin-left: $general_padding
+        border: 1px solid rgba(200, 200, 200, .25)
+        border-radius: 50px
+        font-weight: 300
+
+        &::placeholder
+          font-family: "Arial", sans-serif
+          font-size: 13px
+          text-transform: uppercase
+
+    .actions
+      width: 400px
+      +flexbox(row, true, space-between)
+
+    input[type="submit"]
+      border: none
+      border-radius: 50px
+      background-color: $blue
+      color: $white
+      padding: $general_padding $general_padding*3
+      text-transform: uppercase
+      font-weight: 500
+      cursor: pointer
+
+.bottom
+  height: 120px
+  background-color: $blue
+  color: $white
+
+  h3
+    font-weight: 500
+
+  .or
+    position: relative
+    bottom: 57px
+    height: 50px
+    width: 50px
+    border-radius: 50px
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
+    background-color: $white
+    color: $blue
+    font-weight: 900
+    text-transform: uppercase
+
+    +flexbox(row, true)
+
+  .socials
+    +flexbox(row, true)
+
+    .social
+      +flexbox(row, true)
+      height: 50px
+      width: 50px
+      margin: 0 $general_padding/2
+      border-radius: 50px
+      background-color: $white
+      color: $blue
+      transition: all .2s
+
+      &:hover
+        background-color: $blue
+        color: $white
+
+      i
+        font-size: 22px

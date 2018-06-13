@@ -1,0 +1,61 @@
+/**
+ * Remove the dotted outline on active elements
+ */
+*
+  outline: 0 !important
+
+
+/**
+ * Use the full page
+ */
+html, body, .wrapper
+  height: 100%
+  width: 100%
+
+  font-family: $font_family
+  background-color: transparentize($background_color, .15)
+  color: $text_color
+
+  +flexbox(column, true)
+
+.background
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  z-index: -10
+
+  background-image: url("../img/background.jpg")
+  background-size: cover
+  background-attachment: fixed
+  background-repeat: no-repeat
+  filter: grayscale(100%)
+
+a, a:link, a:visited
+  color: $blue
+  text-decoration: none
+
+/**
+ * Use a wrapper element which is a flexbox
+ */
+.wrapper
+  height: 700px
+  width: 650px
+  background-color: $white
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
+
+  overflow: hidden
+
+  +flexbox(column, true, space-between)
+
+.copyright
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+
+  padding: $general_padding
+  font-family: "Raleway", sans-serif
+
+  +flexbox(row, true, center)
