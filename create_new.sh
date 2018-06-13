@@ -12,5 +12,8 @@ die () {
 # Validate argument to be an alphanumeric string
 ! [[ "$1" =~ [^a-zA-Z0-9_-] ]] || die "'$1' must only contain letters, numbers, hyphens or underscores!"
 
-# Copy the boilerplate to the new project folder
-rsync -av --progress project-boilerplate/ $1 --exclude node_modules
+echo " >  Creating new project at '$1'..."
+rsync -aq --progress project-boilerplate/ $1 --exclude node_modules
+
+echo " >  Running 'npm install'..."
+cd $1 && npm install
