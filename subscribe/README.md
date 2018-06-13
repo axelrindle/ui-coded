@@ -1,0 +1,12 @@
+# project-boilerplate
+
+> A basic boilerplate for all UI projects to save time.
+
+## Material used
+
+- [Paperplane Icon](https://www.iconfinder.com/icons/115704/paper_plane_paperplane_icon) - *[Creative Commons (Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/)*
+- [Envelope Icon](https://www.iconfinder.com/icons/885748/email_envelope_letter_mail_message_icon) - *[Creative Commons (Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/)*
+
+## License
+
+[MIT](LICENSE)

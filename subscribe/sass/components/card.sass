@@ -1,0 +1,57 @@
+.card
+  width: 850px
+  height: 600px
+
+  background-color: $blue
+  box-shadow: 0 19px 38px rgba(0,0,0,0.20), 0 15px 12px rgba(0,0,0,0.12)
+
+  .top
+    height: $top_section_height
+    +flexbox(column)
+
+    img
+      height: 125px
+      margin-bottom: 40px
+      filter: brightness(10)
+
+    h1, h4
+      margin: 10px 0
+
+    h1
+      font-size: 40px
+      font-weight: 700
+      text-transform: uppercase
+
+    h4
+      font-weight: 400
+
+  .bottom
+    height: 100% - $top_section_height
+
+    form
+      height: 100%
+      width: 100%
+      +flexbox(row, false)
+
+      input
+        border: none
+        border-radius: 0px
+        color: $text_color
+        padding: 0
+
+        &[type="email"]
+          flex-grow: 1
+          background-color: $background_email_input
+          text-align: center
+
+        &[type="submit"]
+          width: 120px
+          background-color: $background_submit_button
+          background-image: url("../img/paperplane.svg")
+          background-position: center
+          background-repeat: no-repeat
+          cursor: pointer
+          transition: all .2s
+
+          &:hover
+            background-color: $background_submit_icon
