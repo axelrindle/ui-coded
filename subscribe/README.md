@@ -2,6 +2,8 @@
 
 > A simple email subscription box.
 
+See [here](https://dribbble.com/shots/2371461-Subscribe) for the original work.
+
 ## Material used
 
 - [Paperplane Icon](https://www.iconfinder.com/icons/115704/paper_plane_paperplane_icon) - *[Creative Commons (Attribution 3.0 Unported)](https://creativecommons.org/licenses/by/3.0/)*
