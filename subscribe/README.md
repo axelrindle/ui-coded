@@ -1,6 +1,6 @@
-# project-boilerplate
+# subscribe
 
-> A basic boilerplate for all UI projects to save time.
+> A simple email subscription box.
 
 ## Material used
 
