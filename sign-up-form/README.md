@@ -3,5 +3,4 @@
 
 See [here](https://www.uplabs.com/posts/sign-up-form-daily-ui-001-b86ba0f2-9913-4704-ab3b-dc7de3a3cd3d) for the original concept.
 
-## License
-[MIT](../LICENSE)
+## [Demo](https://axelrindle.github.io/ui-coded/sign-up-form/site/)
