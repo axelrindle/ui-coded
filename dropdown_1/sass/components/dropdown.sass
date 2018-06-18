@@ -1,0 +1,80 @@
+.dropdown
+  font-weight: 500
+  min-width: 300px
+
+  img
+    height: 30px
+    width: 30px
+
+    &:first-child
+      margin-right: $general_padding * 2
+
+  span
+    flex: 1 0 auto
+
+  .content, .title
+    box-shadow: 0px 0px 10px 0px rgba(140,140,140,0.5)
+    transition: all .1s
+
+  .title
+    background-color: $white
+    color: $blue
+
+    width: inherit
+    padding: $general_padding $general_padding * 2
+    +flexbox(row, true, space-between)
+
+    cursor: pointer
+
+  .content
+    width: 100%
+    position: relative
+    top: 30px
+
+    border-radius: $border_radius
+    color: $dropdown_item_text_color
+
+    +flexbox(column, false)
+    display: none
+
+    .item
+      cursor: pointer
+      padding: $general_padding $general_padding * 2
+      background-color: $white
+      transition: all .1s
+      +flexbox(row, true, space-between)
+
+      &:first-child
+        border-top-left-radius: $border_radius
+        border-top-right-radius: $border_radius
+
+      &:last-child
+        border-bottom-left-radius: $border_radius
+        border-bottom-right-radius: $border_radius
+
+      &:before
+        display: none
+        content: ' '
+        height: 63px
+        width: 5px
+        background-color: $blue
+        position: absolute
+        left: 0
+        border: $border_radius 0 0 $border_radius
+
+      &:not(:last-child)
+        border-bottom: 1px solid $border_color
+
+      &:hover
+        color: darken($dropdown_item_text_color, 15%)
+
+        &:before
+          display: block
+
+  &:hover
+    .title
+      background-color: $blue
+      color: $white
+
+    .content
+      display: flex
