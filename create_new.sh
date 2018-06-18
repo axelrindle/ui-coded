@@ -15,5 +15,7 @@ die () {
 echo " >  Creating new project at '$1'..."
 rsync -aq --progress project-boilerplate/ $1 --exclude node_modules
 
-echo " >  Running 'npm install'..."
+echo " >  Installing dependencies..."
 cd $1 && npm install
+
+echo " >  Done."
