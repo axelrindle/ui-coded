@@ -1,0 +1,28 @@
+.content
+  width: 100% - $card_sidebar_width
+  padding: 0 $general_padding
+  border-left: 1px solid $border_color
+
+  +flexbox(column, false)
+
+  img
+    width: 100px
+
+  .light
+    color: $light_grey
+
+  .head, .message, .foot
+    padding: $general_padding 0
+
+  .head, .foot
+    +flexbox(row, true, space-between)
+
+  .head, .message
+    border-bottom: 1px solid $border_color
+
+  .message
+    flex: 1 0 auto
+    padding-right: $general_padding * 2
+
+  .foot
+    font-size: 12px
