@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta stuff -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page title -->
+    <title>UI Coded</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="assets/vendor/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+  <body>
+
+    <!-- Github Ribbon -->
+    <a href="https://github.com/axelrindle/ui-coded/tree/master/ui-coded-site"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+    <!-- Content wrapper -->
+    <div class="wrapper" id="app">
+
+      <div>
+        <h1>UI Coded</h1>
+        <h2>Projects</h2>
+      </div>
+
+      <!-- Boxes beneath -->
+      <div class="column">
+
+        <!-- Search -->
+        <input class="box padding space" type="text" placeholder="Filter" v-model="filter">
+
+        <!-- Fancy project list -->
+        <div class="projects space">
+
+          <!-- Loading indicator -->
+          <h1 v-if="loading">...</h1>
+
+          <!-- Project loop -->
+          <div class="project" v-for="project in projectsFiltered()" v-else>
+            <span>{{ project.name }}</span>
+            <a :href="project.url">View</a>
+          </div>
+
+        </div> <!-- end .projects -->
+
+        <!-- Info -->
+        <div class="box padding">
+          <span>Total Projects:&nbsp;</span>
+          <b>{{ projects.length }}</b>
+          <div class="inline" v-if="filter !== ''">
+            <span>&nbsp;&nbsp;//&nbsp;&nbsp;Showing:&nbsp;</span>
+            <b>{{ projectsFiltered().length }}</b>
+          </div>
+          <div>
+            <span>Requests:&nbsp;</span>
+            <b>{{ requests.left }}</b>
+            <span>&nbsp;/&nbsp;</span>
+            <b>{{ requests.total }}</b>
+          </div>
+        </div>
+
+      </div> <!-- end .column -->
+
+    </div> <!-- end .wrapper -->
+
+    <!-- JS files -->
+    <script src="assets/vendor/axios.min.js"></script>
+    <script src="assets/vendor/vue.min.js"></script>
+    <script src="assets/js/get.js" charset="utf-8"></script>
+    <script src="assets/js/list.js" charset="utf-8"></script>
+
+  </body>
+</html>

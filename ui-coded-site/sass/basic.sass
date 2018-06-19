@@ -1,0 +1,61 @@
+/**
+ * Remove the dotted outline on active elements
+ */
+*
+  outline: 0 !important
+
+
+/**
+ * Use the full page
+ */
+html, body, .wrapper
+  height: 100%
+  width: 100%
+  font-family: $font_family
+
+h1, h2
+  font-family: $font_family_display
+  margin: 20px 0
+  text-shadow: 1px 1px 0 $purple, 2px 2px 0 $purple, 3px 3px 0 $purple, 4px 4px 0 $purple, 5px 5px 0 $purple
+
+h1
+  font-size: 100px
+
+h2
+  font-size: 50px
+
+body
+  background-color: $background_color
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#6534ff+0,29274c+100 */
+  background: #6534ff /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #6534ff 0%, #29274c 100%) /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #6534ff 0%,#29274c 100%) /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #6534ff 0%,#29274c 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6534ff', endColorstr='#29274c',GradientType=1 ) /* IE6-9 fallback on horizontal gradient */
+
+/**
+ * Use a wrapper element which is a flexbox
+ */
+.wrapper
+  width: 900px
+  margin: auto
+  color: $text_color
+  +flexbox(row, true, space-between)
+
+.white
+  color: $white
+
+.column
+  +flexbox(column, true, space-between)
+
+input
+  border: none
+
+.padding
+  padding: $general_padding / 2 $general_padding !important
+
+.space
+  margin-bottom: $general_padding
+
+.inline
+  display: inline

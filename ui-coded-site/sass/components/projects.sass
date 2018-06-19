@@ -1,0 +1,33 @@
+.projects
+  @extend .box
+  height: 500px
+  overflow-y: auto
+
+  +flexbox(column, true, flex-start)
+
+  h1
+    text-shadow: none
+
+  .project
+    width: 100%
+    padding: $general_padding / 1.5 $general_padding
+
+    +flexbox(row, true, space-between)
+
+    &:not(:last-child)
+      border-bottom: 1px solid transparentize($blue, .5)
+
+    span
+      font-weight: 700
+
+    a
+      text-decoration: none
+      color: $purple
+      padding: 8px 16px
+      border: 1px solid $purple
+      border-radius: 10px
+      transition: all .1s
+
+      &:hover
+        background-color: $purple
+        color: $white
