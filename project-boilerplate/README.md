@@ -6,4 +6,6 @@ Please note that the style is **not** responsive. For best results view with a 1
 
 See [here](#) for the original work.
 
-## [Demo](https://axelrindle.github.io/ui-coded/project-boilerplate/site/)
+## [Demo](https://axelrindle.github.io/ui-coded/project-boilerplate/)
+
+## Material used

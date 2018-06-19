@@ -6,7 +6,7 @@ Please note that the style is **not** responsive. For best results view with a 1
 
 See [here](hhttps://dribbble.com/shots/2362775-Dropdown-Day-027-dailyui) for the original work.
 
-## [Demo](https://axelrindle.github.io/ui-coded/dropdown_1/site/)
+## [Demo](https://axelrindle.github.io/ui-coded/dropdown_1/)
 
 ## Material used
 

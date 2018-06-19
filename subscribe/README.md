@@ -4,7 +4,7 @@
 
 See [here](https://dribbble.com/shots/2371461-Subscribe) for the original work.
 
-## [Demo](https://axelrindle.github.io/ui-coded/subscribe/site/)
+## [Demo](https://axelrindle.github.io/ui-coded/subscribe/)
 
 ## Material used
 

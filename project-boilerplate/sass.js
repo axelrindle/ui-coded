@@ -10,7 +10,7 @@ const cssnano = require('cssnano')({ preset: 'advanced'});
 
 // Files
 const input = 'sass/style.sass';
-const output = 'site/css/style.min.css';
+const output = 'assets/css/style.min.css';
 
 // Process
 del(output) // delete old file

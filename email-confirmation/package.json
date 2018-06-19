@@ -5,7 +5,7 @@
   "main": "sass.js",
   "scripts": {
     "sass": "node sass.js",
-    "serve": "http-server ./site"
+    "serve": "http-server ./"
   },
   "keywords": [
     "ui",
