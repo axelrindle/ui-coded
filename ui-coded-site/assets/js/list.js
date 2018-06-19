@@ -1,3 +1,5 @@
+/*global findGetParameter, axios, Vue*/
+
 // GitHub API Authentication
 let token = findGetParameter("token");
 if (token) {
