@@ -5,7 +5,9 @@
   "main": "sass.js",
   "scripts": {
     "sass": "node sass.js",
-    "serve": "http-server ./"
+    "serve": "http-server ./",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "keywords": [
     "ui",
@@ -24,5 +26,9 @@
     "http-server": "^0.11.1",
     "node-sass": "^4.9.0",
     "write": "^1.0.3"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.85.0"
   }
 }
