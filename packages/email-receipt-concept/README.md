@@ -5,7 +5,7 @@ Please note that the style is **not** responsive. For best results view with a 1
 
 See [here](https://dribbble.com/shots/2346115-Email-receipt-concept) for the original work.
 
-## [Demo](https://axelrindle.github.io/ui-coded/email-receipt-concept/)
+## [Demo](https://axelrindle.github.io/ui-coded/packages/email-receipt-concept/)
 
 ## Material used
 - [receipt icon](https://thenounproject.com/icon/1406665/) by Georgiana Ionescu from the Noun Project ([CCBY](https://creativecommons.org/licenses/by/3.0/us/legalcode)

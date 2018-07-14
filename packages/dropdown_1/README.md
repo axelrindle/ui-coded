@@ -4,9 +4,9 @@
 
 Please note that the style is **not** responsive. For best results view with a 1920x1080 resolution.
 
-See [here](hhttps://dribbble.com/shots/2362775-Dropdown-Day-027-dailyui) for the original work.
+See [here](https://dribbble.com/shots/2362775-Dropdown-Day-027-dailyui) for the original work.
 
-## [Demo](https://axelrindle.github.io/ui-coded/dropdown_1/)
+## [Demo](https://axelrindle.github.io/ui-coded/packages/dropdown_1/)
 
 ## Material used
 
