@@ -6,7 +6,7 @@ if (token) {
   axios.defaults.headers.common['Authorization'] = "token " + token;
 }
 
-const app = new Vue({
+new Vue({
 
   // root element
   el: '#app',
@@ -26,7 +26,7 @@ const app = new Vue({
 
     // Transforms and filters a response to only hold the data we need
     transformResponse: function (response) {
-      const hidden = ["project-boilerplate", "ui-coded-site"];
+      const hidden = ['ui-coded-site'];
       return response
         .filter(function (el) {
           return el.type === 'dir' && hidden.indexOf(el.name) === -1;
@@ -42,29 +42,32 @@ const app = new Vue({
     // fetch a list of repository contents
     fetchProjectList: function () {
       this.loading = true;
-      axios.get('https://api.github.com/repos/axelrindle/ui-coded/contents/')
+      const self = this;
+      axios.get('https://api.github.com/repos/axelrindle/ui-coded/contents/packages/')
         .then(function (response) {
-          app.requests = {
+          self.requests = {
             left: response.headers['x-ratelimit-remaining'],
             total: response.headers['x-ratelimit-limit']
           }
-          app.loading = false;
-          app.projects = app.transformResponse(response.data);
+          self.loading = false;
+          self.projects = self.transformResponse(response.data);
         })
         .catch(function (error) {
-          app.loading = false;
+          self.loading = false;
           alert(error);
         });
     },
 
     projectsFiltered: function () {
+      const self = this;
       return this.projects.filter(function (el) {
-        return el.name.indexOf(app.filter) !== -1;
+        return el.name.indexOf(self.filter) !== -1;
       });
     }
 
+  },
+
+  mounted() {
+    this.fetchProjectList();
   }
 });
-
-// initial fetch
-app.fetchProjectList();

@@ -13,9 +13,6 @@ die () {
 ! [[ "$1" =~ [^a-zA-Z0-9_-] ]] || die "'$1' must only contain letters, numbers, hyphens or underscores!"
 
 echo " >  Creating new project at '$1'..."
-rsync -aq --progress project-boilerplate/ $1 --exclude node_modules
-
-echo " >  Installing dependencies..."
-cd $1 && npm install
+rsync -aq --progress project-boilerplate/ packages/$1
 
 echo " >  Done."
