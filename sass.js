@@ -19,8 +19,8 @@ const baseOutput = 'assets/css/style.min.css';
  */
 function process(basePath) {
   // Project files
-  const input = path.resolve(basePath, baseInput);
-  const output = path.resolve(basePath, baseOutput);
+  const input = path.resolve('packages', basePath, baseInput);
+  const output = path.resolve('packages', basePath, baseOutput);
 
   // delete old file
   del(output)
