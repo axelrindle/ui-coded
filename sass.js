@@ -69,7 +69,7 @@ readdir.read('packages/', ['*/'], readdir.INCLUDE_DIRECTORIES + readdir.NON_RECU
           type: 'list',
           name: 'project',
           message: 'Select the project to compile the SASS files for:',
-          choices: directories
+          choices: directories.sort()
         }
       ])
         // Compile!
