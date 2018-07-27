@@ -9,5 +9,13 @@
     "readdir": "^0.1.0",
     "write": "^1.0.3"
   },
-  "private": true
+  "private": true,
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.89.0"
+  }
 }
