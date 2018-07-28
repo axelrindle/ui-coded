@@ -73,6 +73,20 @@ new Vue({
     projectUrl: function (project) {
       const demoBase = 'https://axelrindle.github.io/ui-coded/packages/';
       return this.viewDemoDirectly ? (demoBase + project.name) : project.url;
+    },
+
+    addApiToken: function () {
+      const def = axios.defaults.headers.common['Authorization'] || '';
+      const token = prompt('Enter your Personal Access Token:', def.replace('token ', ''));
+      if (token !== null) {
+        axios.defaults.headers.common['Authorization'] = 'token ' + token;
+        localStorage.setItem('token', token);
+        this.fetchProjectList();
+      }
+    },
+
+    apiButtonText: function () {
+      return axios.defaults.headers.common['Authorization'] === undefined ? 'Add API token' : 'Change API token';
     }
 
   },
@@ -85,8 +99,10 @@ new Vue({
 
   mounted() {
     // load state
-    const item = localStorage.getItem('viewDemoDirectly') === 'true';
-    this.viewDemoDirectly = item;
+    const viewDemoDirectly = localStorage.getItem('viewDemoDirectly') === 'true';
+    const token = localStorage.getItem('token');
+    this.viewDemoDirectly = viewDemoDirectly;
+    if (token) axios.defaults.headers.common['Authorization'] = 'token ' + token;
 
     // load projects
     this.fetchProjectList();

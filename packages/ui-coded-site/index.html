@@ -30,6 +30,7 @@
         <div>
           <input type="checkbox" class="switch-input" id="viewDemoDirectly" v-model="viewDemoDirectly">
           <label for="viewDemoDirectly" class="switch-label">View demo directly</label>
+          <button type="button" class="apiButton" @click="addApiToken">{{ apiButtonText() }}</button>
         </div>
       </div>
 
