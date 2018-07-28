@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 24 24"
+   version="1.1"
+   x="0px"
+   y="0px"
+   id="svg18"
+   sodipodi:docname="noun_add_1147201.svg"
+   width="24"
+   height="24"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata24">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>st24_plus</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs22" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="996"
+     id="namedview20"
+     showgrid="false"
+     inkscape:zoom="7.8666667"
+     inkscape:cx="12"
+     inkscape:cy="15"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g12" />
+  <title
+     id="title2">st24_plus</title>
+  <desc
+     id="desc4">Created with Sketch.</desc>
+  <g
+     id="g12"
+     style="fill:none;fill-rule:evenodd;stroke:none;stroke-width:1">
+    <g
+       transform="translate(-450,-100)"
+       id="g10"
+       style="fill:#ffffff;fill-opacity:1">
+      <g
+         transform="translate(450,100)"
+         id="g8"
+         style="fill:#ffffff;fill-opacity:1">
+        <path
+           d="M 11,11 H 4 c -0.5522847,0 -1,0.447715 -1,1 0,0.552285 0.4477153,1 1,1 h 7 v 7 c 0,0.552285 0.447715,1 1,1 0.552285,0 1,-0.447715 1,-1 v -7 h 7 c 0.552285,0 1,-0.447715 1,-1 0,-0.552285 -0.447715,-1 -1,-1 H 13 V 4 C 13,3.4477153 12.552285,3 12,3 11.447715,3 11,3.4477153 11,4 Z"
+           id="path6"
+           inkscape:connector-curvature="0"
+           style="fill:#ffffff;fill-opacity:1" />
+      </g>
+    </g>
+  </g>
+</svg>

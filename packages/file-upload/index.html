@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Meta stuff -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Page title -->
+    <title>File Upload</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="assets/vendor/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+  <body>
+
+    <!-- Github Ribbon -->
+    <a href="https://github.com/axelrindle/ui-coded/tree/master/packages/file-upload"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+    <!-- Content wrapper -->
+    <div class="wrapper">
+      <div class="card">
+
+        <!-- File list -->
+        <div class="head">
+
+          <!-- PSD file, done -->
+          <div class="file">
+            <span class="type psd">PSD</span>
+            <div class="info">
+              <div class="details">
+                <p>Manhattan_2.psd</p>
+                <p class="dimmed">300 kB</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PDF file, not done -->
+          <div class="file">
+            <span class="type pdf">PDF</span>
+            <div class="info">
+              <div class="details has-progress dimmed-strong">
+                <div class="top">
+                  <p>Global............pdf</p>
+                  <img src="assets/img/noun_Close_1816905.svg">
+                </div>
+                <div class="progress">
+                  <div class="filled" style="width: 55%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ZIP file, not done -->
+          <div class="file">
+            <span class="type zip">ZIP</span>
+            <div class="info">
+              <div class="details has-progress dimmed-strong">
+                <div class="top">
+                  <p>Rover.zip</p>
+                  <img src="assets/img/noun_Close_1816905.svg">
+                </div>
+                <div class="progress">
+                  <div class="filled" style="width: 35%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- end .head -->
+
+        <!-- File drag section -->
+        <div class="foot" id="app">
+
+          <button type="button" class="addButton" @click="triggerFileChoose">
+            <img src="assets/img/noun_add_1147201.svg">
+          </button>
+
+          <!-- Upload drag region -->
+          <div class="upload" @click="triggerFileChoose">
+            <h1 class="dimmed">Drag files here or <b class="text-cyan">Browse</b></h1>
+            <input type="file" multiple ref="fileInput">
+          </div> <!-- end .upload -->
+
+        </div> <!-- end .foot -->
+
+      </div> <!-- end .card -->
+    </div> <!-- end .wrapper -->
+
+    <!-- Original Author -->
+    <div class="copyright">
+      Original Work by&nbsp;
+      <a href="https://dribbble.com/AdarshGo">Adarsh Goldar</a>:&nbsp;
+      <a href="https://dribbble.com/shots/4317107-DailyUI-Challenge-031-File-Upload">https://dribbble.com/shots/4317107-DailyUI-Challenge-031-File-Upload</a>
+    </div> <!-- end .copyright -->
+
+
+    <!-- JS files -->
+    <script src="assets/vendor/vue.min.js" charset="utf-8"></script>
+    <script src="assets/js/upload.js" charset="utf-8"></script>
+
+  </body>
+</html>

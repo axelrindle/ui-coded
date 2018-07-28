@@ -1,0 +1,41 @@
+.upload
+  height: 100%
+  width: 100%
+  border: 3px dashed $border_color
+  border-radius: 16px
+  cursor: pointer
+  transition: all .2s
+  +flexbox(row)
+
+  &:hover
+    background-color: darken($background_color_file_drag, 2%)
+
+  h1
+    font-size: 24px
+    font-weight: 400
+    margin: $general_padding * 2.5 0
+
+  input[type="file"]
+    display: none
+
+.addButton
+  background-color: $cyan
+  color: white
+  height: 70px
+  width: 70px
+  position: absolute
+  right: 30px
+  top: -40px
+  border: none
+  border-radius: 70px
+  box-shadow: 0 10px 30px $cyan
+  cursor: pointer
+  transition: all .2s
+  +flexbox(row)
+
+  &:hover
+    background-color: darken($cyan, 10%)
+
+  img
+    height: 34px
+    width: 34px
