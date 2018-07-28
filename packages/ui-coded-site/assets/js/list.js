@@ -94,6 +94,10 @@ new Vue({
   watch: {
     viewDemoDirectly() {
       localStorage.setItem('viewDemoDirectly', this.viewDemoDirectly);
+    },
+
+    filter() {
+      localStorage.setItem('filter', this.filter);
     }
   },
 
@@ -101,8 +105,10 @@ new Vue({
     // load state
     const viewDemoDirectly = localStorage.getItem('viewDemoDirectly') === 'true';
     const token = localStorage.getItem('token');
+    const filter = localStorage.getItem('filter');
     this.viewDemoDirectly = viewDemoDirectly;
     if (token) axios.defaults.headers.common['Authorization'] = 'token ' + token;
+    if (filter) this.filter = filter;
 
     // load projects
     this.fetchProjectList();
