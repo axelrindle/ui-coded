@@ -6,7 +6,7 @@ const path = require('path');
 const sass = require('node-sass');
 const write = require('write');
 const del = require('del');
-const cssnano = require('cssnano')({ preset: 'advanced'});
+const postcss = require('postcss')
 const readdir = require('readdir');
 const inquirer = require('inquirer');
 
@@ -36,10 +36,13 @@ function process(basePath) {
     });
   })
 
-  // optimize css using cssnano
+  // optimize css
   .then(result => {
     console.log('Optimize css using cssnano...');
-    return cssnano.process(result);
+    return postcss([
+      require('cssnano')({ preset: 'advanced' })
+    ])
+      .process(result, { from: undefined });
   })
 
   // write css to file
