@@ -6,8 +6,9 @@ const path = require('path');
 const readdir = require('readdir');
 const inquirer = require('inquirer');
 const httpServer = require('http-server');
+const opn = require('opn');
 
-function serve(project) {
+async function serve(project) {
   const dir = `./packages/${project}`;
   const port = 8080;
   const server = httpServer.createServer({ root: path.resolve(dir) });
@@ -16,6 +17,7 @@ function serve(project) {
     console.log(`Listening on ${port}`);
     console.log('Hit CTRL-C to stop the server');
   });
+  await opn(`http://localhost:${port}`);
 }
 
 // Get available packages
