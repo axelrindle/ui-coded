@@ -1,0 +1,76 @@
+/**
+ * Remove the dotted outline on active elements
+ */
+*
+  outline: 0 !important
+
+
+/**
+ * Use the full page
+ */
+html, body, .wrapper
+  height: 100%
+  width: 100%
+  font-family: $font_family
+
+h2, h3
+  margin: 5px 0
+
+h2
+  font-size: 24px
+
+h3
+  font-size: 16px
+
+p
+  line-height: 1.5
+
+  &:not(:last-child)
+    margin-bottom: $general_padding
+
+a, a:link, a:visited
+  color: darken($light_grey, 5%)
+  text-decoration: none
+  transition: all .1s
+
+  &:hover
+    color: darken($light_grey, 25%)
+
+
+/**
+ * Use a wrapper element which is a flexbox
+ */
+.wrapper
+  background-color: $background_color
+  background-image: url("../img/background.svg")
+  background-size: cover
+  background-repeat: no-repeat
+  color: $text_color
+  +flexbox(row, true)
+
+.copyright
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  padding: $general_padding
+  +flexbox(row, true)
+
+  a
+    color: #555555 !important
+
+    &:hover
+      text-decoration: underline
+
+.space-bottom
+  margin-bottom: 10px
+
+.row
+  display: flex
+  flex-flow: row nowrap
+
+  & :not(:first-child)
+    margin-left: $card_head_date_spacing
+
+  & :not(:last-child)
+    margin-right: $card_head_date_spacing

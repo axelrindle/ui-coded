@@ -1,0 +1,31 @@
+.sidebar
+  width: $card_sidebar_width
+  background-color: $blue
+  color: $white
+  border-radius: $border_radius 0 0 $border_radius
+
+  +flexbox(column, false)
+
+  .item
+    flex: 1 0 auto
+    padding: $general_padding
+
+    +flexbox(row, false)
+
+    // Slightly bigger for the header
+    &.big
+      padding: $general_padding + 6px $general_padding
+
+    // Border between items
+    &:not(:last-child)
+      border-bottom: 1px solid transparentize($white, .75)
+
+    // Fontawesome icon size
+    i
+      +flexbox(row, true, center, flex-start)
+      width: 30px
+      font-size: 22px
+      margin-right: $general_padding
+
+    & .text
+      +flexbox(column, true, space-between, flex-start)

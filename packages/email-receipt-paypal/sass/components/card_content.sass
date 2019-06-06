@@ -1,0 +1,57 @@
+.content
+  width: 100% - $card_sidebar_width
+  padding: 0 $general_padding
+  border-left: 1px solid $border_color
+
+  +flexbox(column, false)
+
+  img
+    width: 100px
+
+  .total
+    display: flex
+    flex-flow: row nowrap
+
+    hr
+      width: 150px
+      height: 1px
+      border: none
+      background-color: $border_color
+      margin: auto $general_padding auto 0
+
+  .light
+    color: $light_grey
+
+  .semilight
+    color: darken($light_grey, 10%)
+
+  .head, .message, .foot
+    padding: $general_padding
+
+  .head, .foot
+    +flexbox(row, true, space-between)
+
+  .head, .message
+    border-bottom: 1px solid $border_color
+
+  .head
+    padding: $general_padding * 2 $general_padding $general_padding $general_padding
+
+  .head h4
+    margin-top: 0
+    margin-bottom: 0
+
+  .head small
+    font-size: 12px
+    display: flex
+    align-items: end
+
+  .message
+    flex: 1 0 auto
+    padding-right: $general_padding * 2
+    display: flex
+    flex-flow: column nowrap
+
+  .foot
+    padding: $general_padding $general_padding $general_padding * 2 $general_padding
+    font-size: 12px

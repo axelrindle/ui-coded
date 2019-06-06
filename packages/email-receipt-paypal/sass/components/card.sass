@@ -1,0 +1,23 @@
+.card
+  height: 550px
+  width: 900px
+  background-color: $background_color
+  box-shadow: 0px 0px $card_shadow_size $card_shadow_size rgba(0, 0, 0, .1f)
+  border-radius: $border_radius
+
+  +flexbox(row, false)
+
+  a
+    color: $link_color
+
+  span.small
+    font-size: 14px
+
+  small
+    color: $light_grey
+
+  .grow
+    flex: 1 0 auto
+
+  @import "card_sidebar"
+  @import "card_content"
