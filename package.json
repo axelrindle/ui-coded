@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "chalk": "^2.4.2",
+    "chokidar": "^3.0.1",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.0-rc.2",
     "del": "^3.0.0",

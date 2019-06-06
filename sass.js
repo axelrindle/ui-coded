@@ -11,7 +11,9 @@ const postcss = require('postcss')
 const readdir = require('readdir');
 const inquirer = require('inquirer');
 const chalk = require('chalk');
+const chokidar = require('chokidar');
 
+// Logging
 const prefix = chalk.magenta.bold(' >  ');
 const print = msg => console.log(prefix + msg);
 const printErr = msg => console.error(prefix + chalk.red(msg));
@@ -28,44 +30,56 @@ function compile(basePath) {
   const input = path.resolve('packages', basePath, baseInput);
   const output = path.resolve('packages', basePath, baseOutput);
 
-  // delete old file
-  del(output)
+  print('Running compilation for: ' + chalk.green(basePath));
 
-  // compile sass
-  .then(_paths => {
-    return new Promise((resolve, reject) => {
-      print('Running compilation for: ' + chalk.green(basePath));
-      print(`Compile sass from file ${chalk.cyan(input)}...`);
-      sass.render({ file: input }, (err, result) => {
-        if (err) reject(err);
-        else resolve(result.css.toString());
-      });
-    });
-  })
+  // Watch file or run once?
+  if (process.argv.indexOf('--watch') !== -1) {
+    print(`Now watching for file changes at ${chalk.green(input)}...`)
+    chokidar.watch(path.join('packages', basePath, '**/*.sass'))
+      .on('change', path => run());
+  } else {
+    run();
+  }
 
-  // optimize css
-  .then(result => {
-    print('Optimize css using cssnano...');
-    return postcss([
-      require('cssnano')({ preset: 'advanced' })
-    ])
-      .process(result, { from: undefined });
-  })
+  function run() {
+    // delete old file
+    del(output)
 
-  // write css to file
-  .then(result => {
-    print(`Write css to ${output}...`);
-    return new Promise((resolve, reject) => {
-      write(output, result, err => {
-        if (err) reject(err);
-        else resolve();
-      });
-    });
-  })
+      // compile sass
+      .then(_paths => {
+        return new Promise((resolve, reject) => {
+          print(`Compile sass from file ${chalk.cyan(input)}...`);
+          sass.render({ file: input }, (err, result) => {
+            if (err) reject(err);
+            else resolve(result.css.toString());
+          });
+        });
+      })
 
-  // finish handlers
-  .then(() => print('Done.'))
-  .catch(err => console.error(chalk.red(err)));
+      // optimize css
+      .then(result => {
+        print('Optimize css using cssnano...');
+        return postcss([
+          require('cssnano')({ preset: 'advanced' })
+        ])
+          .process(result, { from: undefined });
+      })
+
+      // write css to file
+      .then(result => {
+        print(`Write css to ${output}...`);
+        return new Promise((resolve, reject) => {
+          write(output, result, err => {
+            if (err) reject(err);
+            else resolve();
+          });
+        });
+      })
+
+      // finish handlers
+      .then(() => print('Done.'))
+      .catch(err => printErr(err.formatted));
+  }
 }
 
 // Use last?
