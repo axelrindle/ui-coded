@@ -25,6 +25,11 @@ new Vue({
     interval: -1,
     resetTimestamp: ''
   },
+  computed: {
+    viewDemoText() {
+      return this.viewDemoDirectly ? 'View demo directly' : 'View Repository';
+    }
+  },
 
   methods: {
 

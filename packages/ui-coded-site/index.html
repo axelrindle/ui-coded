@@ -29,7 +29,7 @@
         <h2 class="space">Projects</h2>
         <div>
           <input type="checkbox" class="switch-input" id="viewDemoDirectly" v-model="viewDemoDirectly">
-          <label for="viewDemoDirectly" class="switch-label">View demo directly</label>
+          <label for="viewDemoDirectly" class="switch-label">{{ viewDemoText }}</label>
           <button type="button" class="apiButton" @click="addApiToken">{{ apiButtonText() }}</button>
         </div>
       </div>
