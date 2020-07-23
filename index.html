@@ -7,7 +7,11 @@
   <body>
 
     <script type="text/javascript">
-      location.href = "https://axelrindle.github.io/ui-coded/packages/ui-coded-site/";
+      let domain = 'https://axelrindle.github.io';
+      if (location.host === 'localhost') {
+        domain = 'http://localhost';
+      }
+      location.href = domain + "/ui-coded/packages/ui-coded-site/";
     </script>
 
   </body>
